@@ -1,0 +1,24 @@
+@font-face {
+    font-family: epilogue-bold;
+    src: url("./files/Epilogue-Bold.ttf");
+}
+
+@font-face {
+    font-family: epilogue-med;
+    src: url("./files/Epilogue-Medium.ttf");
+}
+
+@font-face {
+    font-family: epilogue-reg;
+    src: url("./files/Epilogue-Regular.ttf");
+}
+
+@font-face {
+    font-family: epilogue-semi;
+    src: url("./files/Epilogue-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: epilogue-italic;
+    src: url("./files/Epilogue-Italic.ttf");
+}
