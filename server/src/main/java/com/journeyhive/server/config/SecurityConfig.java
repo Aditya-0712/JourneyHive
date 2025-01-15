@@ -76,10 +76,10 @@ public class SecurityConfig {
                             cookie.setPath("/");
                             cookie.setMaxAge(7 * 24 * 60 * 60);
                             cookie.setHttpOnly(true);
+                            cookie.setSecure(true);
 
                             response.addCookie(cookie);
-
-                            response.sendRedirect("http://localhost:3000/home");
+                            response.sendRedirect("https://journey-hive.vercel.app/home");
                         })
                         .failureUrl("/oauth2/failure")
                         .userInfoEndpoint(userInfo -> userInfo
@@ -113,7 +113,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true);
-        configuration.addAllowedOrigin("http://localhost:3000");
+        configuration.addAllowedOrigin("https://journey-hive.vercel.app");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
 
