@@ -85,4 +85,4 @@ Contributions are welcome! Feel free to submit issues or pull requests to improv
 This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
-For inquiries or support, please contact **Aditya Batgeri** at [aditya@example.com](mailto:aditya@example.com).
+For inquiries or support, please contact **Aditya Batgeri** at [aditya@example.com](mailto:adityabatgeri@gmail.com).
