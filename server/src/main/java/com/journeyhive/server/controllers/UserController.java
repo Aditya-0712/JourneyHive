@@ -37,6 +37,9 @@ public class UserController {
             cookie.setSecure(true);
 
             response.addCookie(cookie);
+            response.setHeader("Set-Cookie",
+                    String.format("%s=%s; Max-Age=%d; Path=%s; HttpOnly; Secure; SameSite=None",
+                            "jh_jwt", token, 7 * 24 * 60 * 60, "/"));
 
             return new ResponseEntity<>(new CustomResponse("Login successful", true), HttpStatus.OK);
         }
@@ -55,6 +58,9 @@ public class UserController {
         cookie.setSecure(true);
 
         response.addCookie(cookie);
+
+        response.setHeader("Set-Cookie",
+                "jh_jwt=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=None");
 
         return new ResponseEntity<>(new CustomResponse("Logout successful", true), HttpStatus.OK);
     }
