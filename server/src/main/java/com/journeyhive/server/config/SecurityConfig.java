@@ -80,6 +80,9 @@ public class SecurityConfig {
                             cookie.setSecure(true);
 
                             response.addCookie(cookie);
+                            response.setHeader("Set-Cookie",
+                                    String.format("%s=%s; Max-Age=%d; Path=%s; HttpOnly; Secure; SameSite=None",
+                                            "jh_jwt", token, 7 * 24 * 60 * 60, "/"));
                             response.sendRedirect("https://journey-hive.vercel.app/home");
                         })
                         .failureUrl("/oauth2/failure")
